@@ -1,18 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      boxShadow: {
+        'custom-shadow': 'rgba(36, 91, 134, 0.4) 5px 5px, rgba(36, 91, 134, 0.3) 10px 10px, rgba(36, 91, 134, 0.2) 15px 15px, rgba(36, 91, 134, 0.1) 20px 20px, rgba(36, 91, 134, 0.05) 25px 25px',
+        'custom-shadow-pink': 'rgba(157, 63, 109, 0.4) 5px 5px, rgba(157, 63, 109, 0.3) 10px 10px, rgba(157, 63, 109, 0.2) 15px 15px, rgba(157, 63, 109, 0.1) 20px 20px, rgba(157, 63, 109, 0.05) 25px 25px',
+        'custom-shadow-purple': 'rgba(77, 60, 112, 0.4) 5px 5px, rgba(77, 60, 112, 0.3) 10px 10px, rgba(77, 60, 112, 0.2) 15px 15px, rgba(77, 60, 112, 0.1) 20px 20px, rgba(77, 60, 112, 0.05) 25px 25px',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui")
+  ],
 }
